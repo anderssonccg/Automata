@@ -25,11 +25,11 @@ public class Automata {
     }
 
     public boolean verificarCadena() {
-        boolean condicion = this.cadena.equals("") || this.cadena.equals(" ");
+        if(this.cadena.equals("")) throw new RuntimeException("Digite la cadena para verificar");
+        boolean condicion = this.cadena.equals(" ");
         String aux = this.cadena;
         String aux2;
         int i = 0;//cantidad de letras
-
         if (!condicion) {
             while (i < this.cadena.length() && this.cadena.charAt(i) == 'a') {
                 aux = this.cadena.substring(i + 1);
